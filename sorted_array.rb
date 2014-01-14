@@ -12,12 +12,7 @@ class SortedArray
 
   def add(new_ele)
     # Hint: Use the Array#insert method.
-    # if new_ele > (new_ele + 1)
-    #   input_arr.push[input_arr.length - 1]
-    # else
-    #   new_ele += 1
-    # end
-
+    @internal_arr.insert(first_larger_index(new_ele), new_ele)
     #raise NotImplementedError.new("You need to implement the add method!")
   end
 
@@ -41,6 +36,7 @@ class SortedArray
   end
 
   def index(target)
-    raise NotImplementedError.new("You need to implement the index method!")
+    @internal_arr.find_index(target)
+    #raise NotImplementedError.new("You need to implement the index method!")
   end
 end
